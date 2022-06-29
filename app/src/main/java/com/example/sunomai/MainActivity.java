@@ -174,7 +174,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             } catch (IOException e) {
                 // TODO: Handle the exception
-                Log.d("eror",e.getMessage());
+                assert urlConnection != null;
+                if(urlConnection.getResponseCode()!=200) {
+                    Log.e("eror", e.getMessage());
+                }
             } finally {
                 if (urlConnection != null) {
                     urlConnection.disconnect();
