@@ -204,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
                     output.append(line);
                     line = reader.readLine();
                 }
+
             }
             return output.toString();
         }
